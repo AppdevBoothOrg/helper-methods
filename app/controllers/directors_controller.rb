@@ -37,8 +37,8 @@ class DirectorsController < ApplicationController
   end
 
   def update
-    director_attributes = params.require(:director).permit(:first_name, :last_name)
-    @director = Director.find(params.fetch(:id))
+    director_attributes = params.require(:director).permit(:first_name, :last_name)
+    @director = Director.find(params.fetch(:id))
     @director.update(director_attributes)
 
     if @director.valid?
