@@ -1,0 +1,21 @@
+<h1>Edit director</h1>
+
+<% @director.errors.full_messages.each do |message| %>
+  <p style="color: red;"><%= message %></p>
+<% end %>
+
+<%= form_with(model: @director, method: :patch) do |form| %>
+  <div>
+    <%= form.label :first_name %>
+
+    <%= form.text_field :first_name %>
+  </div>
+
+  <div>
+    <%= form.label :last_name %>
+
+    <%= form.text_area :last_name, rows: 3 %>
+  </div>
+
+  <%= form.button %>
+<% end %>

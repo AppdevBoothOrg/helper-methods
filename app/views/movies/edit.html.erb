@@ -5,7 +5,6 @@
 <% end %>
 
 <%= form_with(model: @movie, method: :patch) do |form| %>
-
   <div>
     <%= form.label :title %>
 
@@ -13,13 +12,10 @@
   </div>
 
   <div>
-
     <%= form.label :description %>
 
     <%= form.text_area :description, rows: 3 %>
-    
   </div>
 
   <%= form.button %>
-
 <% end %>
